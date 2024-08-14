@@ -8,7 +8,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light d-print-block">
             <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1" id="form-title">
-                    <img src="assets/logo.png" style="display: inline-block; height: 1.3em;" /> Form Viewer
+                    <img src="assets/logo.png" style="display: inline-block; height: 1.3em;" /> Shea PDF Form Viewer
                 </span>
             </div>
         </nav>
@@ -70,7 +70,7 @@
           }
         }
       }
-
+      
       // Allow them to provide SSO tokens to the form viewer.
       if (query.token) {
         localStorage.setItem('formioToken', query.token);
@@ -154,6 +154,9 @@
             width: 100%;
         }
 
+        .sheaContact .form-control{
+            height: 90px;
+        }
         .table {
           table-layout: fixed;
         }
@@ -219,7 +222,6 @@
   if (bodyClass) {
     document.body.className = bodyClass;
   }
-
   // Add the auto page break styles to the header unless they turn them off.
   if (!query.autoPageBreak || query.autoPageBreak !== 'none') {
     var style = document.createElement('style');
@@ -227,7 +229,7 @@
     style.innerHTML = ".formio-component { page-break-inside:avoid; break-inside:avoid; } " +
       ".formio-component-form { page-break-inside:auto; break-inside:auto; }";
     document.getElementsByTagName('head')[0].appendChild(style);
-  }
+  }  
 </script>
 <div class="container-fluid main pf" id="main">
     <div id="preform"></div>
